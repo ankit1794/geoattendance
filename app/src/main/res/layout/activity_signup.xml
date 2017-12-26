@@ -41,6 +41,7 @@
                 >
 
                 <android.support.design.widget.TextInputEditText
+                    android:id="@+id/ed_Name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="FullName"
@@ -76,7 +77,8 @@
             </RadioGroup>
 
 
-            <android.support.design.widget.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <android.support.design.widget.TextInputLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/companyname"
                 layout_height="16dp"
                 android:layout_width="match_parent"
@@ -84,6 +86,7 @@
                 android:layout_below="@+id/rgp_gender">
 
                 <android.support.design.widget.TextInputEditText
+                    android:id="@+id/ed_companyName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
@@ -102,6 +105,7 @@
                 android:layout_below="@+id/companyname">
 
                 <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edt_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
@@ -111,7 +115,8 @@
 
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <android.support.design.widget.TextInputLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/password"
                 layout_height="16dp"
                 android:layout_width="match_parent"
@@ -119,6 +124,7 @@
                 android:layout_below="@+id/Email">
 
                 <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edtpassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
@@ -137,6 +143,7 @@
                 android:layout_below="@+id/password">
 
                 <android.support.design.widget.TextInputEditText
+                    android:id="@+id/EdtRePassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
 
@@ -148,18 +155,18 @@
             </android.support.design.widget.TextInputLayout>
 
             <Button
-                android:id="@+id/btn_next"
+                android:id="@+id/btn_submit"
 
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
 
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/repassword"
                 android:layout_marginBottom="10dp"
 
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="30dp"
                 android:paddingLeft="5dp"
-                android:text="next" />
+                android:text="submit" />
 
 
         </RelativeLayout>

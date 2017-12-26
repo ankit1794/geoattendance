@@ -39,13 +39,13 @@
         <item name="android:text">Login</item>
     </style>
 
-    <style name="WMFullscreen" parent="HelperTheme.FullScreen">
+    <style name="GEFullscreen" parent="HelperTheme.FullScreen">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="WMCustomTabTitle" parent="TextAppearance.Design.Tab">
+    <style name="GECustomTabTitle" parent="TextAppearance.Design.Tab">
         <item name="textAllCaps">false</item>
         <item name="android:textSize">@dimen/fs_nav_label</item>
     </style>
