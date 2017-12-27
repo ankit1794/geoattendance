@@ -10,6 +10,11 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -44,12 +49,16 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:11.6.2'
     implementation 'com.google.firebase:firebase-storage:11.6.2'
     implementation 'com.firebaseui:firebase-ui-database:3.1.0'
+    compile 'com.google.firebase:firebase-crash:11.6.2'
 
     //image crop
     compile 'com.theartofdev.edmodo:android-image-cropper:2.6.+'
 
     //text input layout
     compile 'com.android.support:design:26.1.0'
+
+    //dialog
+    compile 'com.afollestad.material-dialogs:core:0.9.6.0'
 
 }
 apply plugin: 'com.google.gms.google-services'

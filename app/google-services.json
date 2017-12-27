@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "165680942485-9orqvr2g4ou9fp90l6h5v8ru63il93fe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tadnyasoftech.geoattendance",
+            "certificate_hash": "53a685fbcce9cdeffc0f1536f0d6ff3a722cafc5"
+          }
+        },
+        {
           "client_id": "165680942485-0bjkijapdgfa3o0njv30inn7vjk4tf7n.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165680942485-0bjkijapdgfa3o0njv30inn7vjk4tf7n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

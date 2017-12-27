@@ -6,6 +6,44 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
+
+    <style name="WMTheme" parent="HelperTheme">
+        <item name="android:editTextStyle">@style/WMEditText</item>
+    </style>
+
+
+    <style name="WMEditText" parent="android:Widget.Holo.EditText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="WMButton" parent="android:Widget.Holo.Button">
+
+    </style>
+
+    <style name="WMButton.LongButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/h_long_button</item>
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/fs_button_text</item>
+    </style>
+
+    <style name="WMButton.LongButton.Login">
+        <item name="android:layout_marginLeft">@dimen/m_login_button</item>
+        <item name="android:layout_marginRight">@dimen/m_login_button</item>
+        <item name="android:layout_marginTop">@dimen/m_login_button</item>
+        <item name="android:text">Login</item>
+    </style>
+
+    <style name="GEFullscreen" parent="HelperTheme.FullScreen">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
 
 </resources>
