@@ -45,10 +45,5 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="GECustomTabTitle" parent="TextAppearance.Design.Tab">
-        <item name="textAllCaps">false</item>
-        <item name="android:textSize">@dimen/fs_nav_label</item>
-    </style>
-
 
 </resources>

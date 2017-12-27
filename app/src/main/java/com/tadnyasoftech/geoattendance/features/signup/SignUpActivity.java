@@ -27,7 +27,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.tadnyasoftech.geoattendance.R;
 import com.tadnyasoftech.geoattendance.db.DatabaseReferenceManager;
 import com.tadnyasoftech.geoattendance.models.Attendance;
-import com.tadnyasoftech.geoattendance.models.Client;
+
 import com.tadnyasoftech.geoattendance.models.User;
 import com.tadnyasoftech.geoattendance.utils.GEUtility;
 
@@ -248,9 +248,13 @@ public class SignUpActivity extends HelperActivity {
                 });
     }
 
-    /*public void goToDashboard(){
-        launch(EmployeeDashboardActivity.class);
-    }*/
+    /*//public void goToDashboard(){
+
+
+    //launch(EmployeeDashboardActivity.class);
+
+
+    //}*/
 
 
     @Override

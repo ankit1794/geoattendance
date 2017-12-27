@@ -29,5 +29,8 @@
     <dimen name="fs_lbl_login_title">20sp</dimen>
     <dimen name="fs_button_text">17sp</dimen>
     <dimen name="fs_nav_label">16sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
 
 </resources>

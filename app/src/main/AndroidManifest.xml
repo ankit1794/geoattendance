@@ -13,21 +13,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/HelperTheme">
-
         <activity
             android:name=".features.signup.SignUpActivity"
             android:parentActivityName=".features.authentication.LoginActivity" />
-
         <activity
             android:name=".features.authentication.LoginActivity"
             android:theme="@style/HelperTheme.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
-
 
 </manifest>
