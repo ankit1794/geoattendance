@@ -3,40 +3,43 @@
     <string name="hint_email">hint_email</string>
     <string name="hint_password">hint_password</string>
     <string name="lbl_forgot">lbl_forgot</string>
-    <string name="permission_not_granted_msg">Permissions required to make app features work, exiting app</string>
+
+    <string name="permission_not_granted_msg">Permissions required to make app features work,
+        exiting app</string>
+
     <string name="action_next">Next</string>
     <string name="progress_message_login">Authenticating…</string>
     <string name="val_msg_valid_email">Enter valid email</string>
     <string name="val_msg_empty_password">Enter password</string>
     <string name="progress_message_reset">Sending email…</string>
-    <string name="message_email_sent">"Reset password email sent, please check your inbox"</string>
+
+    <string name="message_email_sent">"Reset password email sent, please check your inbox"
+    </string>
+
     <string name="minimum_password">enter minimum password</string>
     <string name="auth_failed">Authentication failed</string>
     <string name="title">Wrong Credentials</string>
     <string name="content">Enter valid Username or Password</string>
     <string name="agree">Back</string>
-    <string name="disagree">No</string>
-    <string name="title1">Welcome to GeoAttendance</string>
-    <string name="content1">Hello SIR/MADAM!</string>
-    <string name="agree1">Thank you!</string>
-    <string name="disagree1">No</string>
-    <string name="title2">Email Field can\'t be Empty</string>
-    <string name="content2">Enter Proper EmailId</string>
-    <string name="agree2">Continue</string>
-    <string name="disagree2" />
-    <string name="title3">Password Field can\'t be Empty</string>
-    <string name="content3">Enter Proper  Password</string>
-    <string name="agree3">Continue</string>
-    <string name="title8">Sorry</string>
-    <string name="content8">errorMsg</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="dialog_title_error">Error</string>
+    <string name="dialog_action_okay">Okay</string>
+    <string name="dialog_title_forgot">Enter Email</string>
+
+    <string name="dialog_content_forgot">An Email will be sent with reset password instructions
+    </string>
+
+    <string name="dialog_action_send">SEND</string>
+    <string name="dialog_hint_forgot">xyz@gmail.com</string>
+    <string name="dialog_success_message"></string>
+    <item name="visible" type="id"/>
+    <item name="masked" type="id"/>
+
 
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_example">Example action</string>
 

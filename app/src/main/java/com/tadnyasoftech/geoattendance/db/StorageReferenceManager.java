@@ -16,7 +16,7 @@ public class StorageReferenceManager {
     private String STORAGE_ROOT = null;
 
     private final class ReferenceKeys {
-        static final String USER_IMAGE = "user_image";
+        static final String USER_IMAGE_REFERENCE = "user_profile_images";
 
     }
 
@@ -35,8 +35,8 @@ public class StorageReferenceManager {
         return FirebaseStorage.getInstance().getReference().child(STORAGE_ROOT);
     }
 
-    public StorageReference getUserImageReference(String entityId) {
-        return getRoot().child(entityId).child(ReferenceKeys.USER_IMAGE);
+    public StorageReference getUserProfileImageReference() {
+        return getRoot().child(ReferenceKeys.USER_IMAGE_REFERENCE);
     }
 
 

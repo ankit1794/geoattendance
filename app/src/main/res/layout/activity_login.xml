@@ -81,10 +81,7 @@
         android:layout_marginTop="@dimen/mt_login_signup_action"
         android:gravity="center"
         android:text="New to GEOATTENDANCE? SIGNUP"
-        android:onClick="onclick"
         android:textColor="@color/colorWhite"
         android:textSize="@dimen/fs_lbl_login_title"/>
-
-
 
 </RelativeLayout>

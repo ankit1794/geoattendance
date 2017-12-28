@@ -37,28 +37,29 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
     //Butterknife
-    compile 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
     //helper
-    compile 'me.rohanpeshkar.helper:helper:0.0.1'
+    implementation 'me.rohanpeshkar.helper:helper:0.0.1'
 
     //Firebase
-    implementation 'com.google.firebase:firebase-core:11.6.2'
-    implementation 'com.google.firebase:firebase-database:11.6.2'
-    implementation 'com.google.firebase:firebase-auth:11.6.2'
-    implementation 'com.google.firebase:firebase-storage:11.6.2'
+    implementation 'com.google.firebase:firebase-core:11.8.0'
+    implementation 'com.google.firebase:firebase-database:11.8.0'
+    implementation 'com.google.firebase:firebase-auth:11.8.0'
+    implementation 'com.google.firebase:firebase-storage:11.8.0'
     implementation 'com.firebaseui:firebase-ui-database:3.1.0'
-    compile 'com.google.firebase:firebase-crash:11.6.2'
+    implementation 'com.google.firebase:firebase-crash:11.8.0'
 
     //image crop
-    compile 'com.theartofdev.edmodo:android-image-cropper:2.6.+'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.6.+'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
 
     //text input layout
-    compile 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
 
     //dialog
-    compile 'com.afollestad.material-dialogs:core:0.9.6.0'
+    implementation 'com.afollestad.material-dialogs:core:0.9.6.0'
 
 }
 apply plugin: 'com.google.gms.google-services'
