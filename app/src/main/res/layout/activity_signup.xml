@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="@color/colorWindowBackground"
+    android:orientation="vertical">
 
     <include layout="@layout/layout_default_toolbar" />
 
-    <ScrollView
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/abl_toolbar"
@@ -16,36 +16,55 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#E1F5FE"
             android:orientation="vertical"
             android:padding="16dp">
 
-
             <TextView
-                android:id="@+id/txt_lbl_personal_details"
+                android:id="@+id/account_details"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Account Details"
                 android:textColor="#B71C1C" />
 
+            <LinearLayout
+                android:id="@+id/capture_employee_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_16"
+                android:weightSum="2">
 
-            <android.support.design.widget.TextInputLayout
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Capture Image: "
+                    android:textSize="15sp" />
 
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/name"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_employee_profile_image"
+                    android:layout_width="0dp"
+                    android:layout_height="85dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_signup_profile" />
+
+            </LinearLayout>
+
+
+            <android.support.design.widget.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/il_full_name"
                 layout_height="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-
-                >
+                android:layout_marginTop="100dp">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/ed_Name"
+                    android:id="@+id/edt_full_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="FullName"
-                    android:inputType="text|textCapCharacters"
+                    android:inputType="text"
                     android:maxLines="1" />
 
             </android.support.design.widget.TextInputLayout>
@@ -55,41 +74,37 @@
                 android:id="@+id/rgp_gender"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/name"
+                android:layout_below="@+id/il_full_name"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
                 <RadioButton
-                    android:id="@+id/radioButton"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/rbn_male"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_below="@+id/surname"
+                    android:layout_weight="1"
                     android:text="Male" />
 
                 <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/rbn_female"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/radioButton"
-                    android:layout_below="@+id/radioButton"
+                    android:layout_weight="1"
                     android:text="Female" />
             </RadioGroup>
 
 
-            <android.support.design.widget.TextInputLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/companyname"
+            <android.support.design.widget.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/il_company_name"
                 layout_height="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/rgp_gender">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/ed_companyName"
+                    android:id="@+id/edt_company_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:layout_marginTop="16dp"
                     android:hint="Enter Company name"
                     android:maxLines="1" />
@@ -98,36 +113,33 @@
 
 
             <android.support.design.widget.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/Email"
+                android:id="@+id/il_email"
                 layout_height="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/companyname">
+                android:layout_below="@+id/il_company_name">
 
                 <android.support.design.widget.TextInputEditText
                     android:id="@+id/edt_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:layout_marginTop="16dp"
                     android:hint="Enter Email ID"
                     android:maxLines="1" />
 
             </android.support.design.widget.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/password"
+            <android.support.design.widget.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/il_password"
                 layout_height="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/Email">
+                android:layout_below="@+id/il_email">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/edtpassword"
+                    android:id="@+id/edt_passsword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:layout_marginTop="16dp"
                     android:hint="Enter Password"
                     android:inputType="textPassword"
@@ -136,17 +148,16 @@
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/repassword"
+                android:id="@+id/il_repeat_password"
                 layout_height="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/password">
+                android:layout_below="@+id/il_password">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/EdtRePassword"
+                    android:id="@+id/edt_repeat_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-
                     android:layout_marginTop="16dp"
                     android:hint="Re-Enter Password"
                     android:inputType="textPassword"
@@ -156,19 +167,17 @@
 
             <Button
                 android:id="@+id/btn_submit"
-
+                style="@style/WMButton.LongButton.Login"
                 android:layout_width="match_parent"
-
-                android:layout_height="50dp"
                 android:layout_alignParentRight="true"
-                android:layout_below="@+id/repassword"
+                android:layout_below="@+id/il_repeat_password"
                 android:layout_marginBottom="10dp"
-
                 android:layout_marginTop="30dp"
                 android:paddingLeft="5dp"
-                android:text="submit" />
-
+                android:text="Submit" />
 
         </RelativeLayout>
     </ScrollView>
+
+
 </RelativeLayout>

@@ -6,6 +6,8 @@ package com.tadnyasoftech.geoattendance.models;
 
 public class User {
 
+    private String id;
+
     private String fullName;
 
     private String gender;
@@ -13,6 +15,8 @@ public class User {
     private String companyName;
 
     private String email;
+
+    private String imageUrl;
 
     public String getFullName() {
         return fullName;
@@ -44,5 +48,19 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getId() { return id; }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
