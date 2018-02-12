@@ -16,7 +16,7 @@
     <string name="message_email_sent">"Reset password email sent, please check your inbox"
     </string>
 
-    <string name="minimum_password">enter minimum password</string>
+    <string name="minimum_password">Enter minimum password</string>
     <string name="auth_failed">Authentication failed</string>
     <string name="title">Wrong Credentials</string>
     <string name="content">Enter valid Username or Password</string>
@@ -26,14 +26,21 @@
     <string name="dialog_action_okay">Okay</string>
     <string name="dialog_title_forgot">Enter Email</string>
 
+    <string name="dialog_title_confirmation">Confirmation</string>
+    <string name="dialog_msg_exit">Do you want to exit of GeoAttendance App?</string>
+
     <string name="dialog_content_forgot">An Email will be sent with reset password instructions
     </string>
 
     <string name="dialog_action_send">SEND</string>
     <string name="dialog_hint_forgot">xyz@gmail.com</string>
-    <string name="dialog_success_message"></string>
-    <item name="visible" type="id"/>
-    <item name="masked" type="id"/>
+    <string name="dialog_success_message">success</string>
+    <item name="visible" type="id" />
+    <item name="masked" type="id" />
+
+    <string name="dialog_title_information">Information</string>
+    <string name="dialog_message_logout">Do you want to logout of GeoAttendance App?</string>
+    <string name="dialog_action_no">No</string>
 
 
     <string name="title_section1">Section 1</string>
@@ -44,4 +51,9 @@
     <string name="action_example">Example action</string>
 
     <string name="action_settings">Settings</string>
+    <string name="title_activity_employee_dashboard">employee_dashboard</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="dialog_action_yes">Yes</string>
 </resources>

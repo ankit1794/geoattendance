@@ -43,7 +43,7 @@
                     android:textSize="15sp" />
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/civ_employee_profile_image"
+                    android:id="@+id/civ_employee_attendance_image"
                     android:layout_width="0dp"
                     android:layout_height="85dp"
                     android:layout_weight="1"
@@ -52,7 +52,8 @@
             </LinearLayout>
 
 
-            <android.support.design.widget.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            <android.support.design.widget.TextInputLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/il_full_name"
                 layout_height="16dp"
                 android:layout_width="match_parent"
@@ -64,8 +65,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="FullName"
-                    android:inputType="text"
-                    android:maxLines="1" />
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"/>
 
             </android.support.design.widget.TextInputLayout>
 

@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.tadnyasoftech.geoattendance.R;
 import com.tadnyasoftech.geoattendance.db.DatabaseReferenceManager;
 import com.tadnyasoftech.geoattendance.db.StorageReferenceManager;
+import com.tadnyasoftech.geoattendance.features.employee_dashboard.EmployeeDashboardActivity;
 import com.tadnyasoftech.geoattendance.models.User;
 import com.tadnyasoftech.geoattendance.utils.GEDialogUtility;
 import com.tadnyasoftech.geoattendance.utils.GEUtility;
@@ -64,7 +65,7 @@ public class SignUpActivity extends HelperActivity {
     @BindView(R.id.il_repeat_password)
     TextInputLayout ilRepeatPassword;
 
-    @BindView(R.id.civ_employee_profile_image)
+    @BindView(R.id.civ_employee_attendance_image)
     CircleImageView civProfileImage;
 
     private User mUser;
@@ -72,6 +73,8 @@ public class SignUpActivity extends HelperActivity {
     private Uri employeeImageUri = null;
 
     private FirebaseAuth mFirebaseAuth;
+
+    private boolean isIndividual = false;
 
     @Override
     protected void create() {
@@ -81,7 +84,7 @@ public class SignUpActivity extends HelperActivity {
         mFirebaseAuth = FirebaseAuth.getInstance();
     }
 
-    @OnClick(R.id.civ_employee_profile_image)
+    @OnClick(R.id.civ_employee_attendance_image)
     void onClickEmployeeImage() {
         CropImage.activity()
                 .setGuidelines(CropImageView.Guidelines.ON)
@@ -109,7 +112,7 @@ public class SignUpActivity extends HelperActivity {
     @OnClick(R.id.btn_submit)
     void onSubmitClick() {
         String fullName = edtFullName.getText().toString().trim();
-        if (TextUtils.isEmpty(fullName)) {
+        if ((TextUtils.isEmpty(fullName)) && (TextUtils.isGraphic(fullName))) {
             ilFullName.setError("Enter valid Name");
             return;
         } else {
@@ -122,6 +125,9 @@ public class SignUpActivity extends HelperActivity {
             showToast("Select Gender");
             return;
         }
+
+        //gender = GEUtility.getCheckedRadioText(rgpGender);
+
 
         String companyName = edtCompanyName.getText().toString().trim();
         if (TextUtils.isEmpty(companyName)) {
@@ -147,7 +153,6 @@ public class SignUpActivity extends HelperActivity {
             ilPassword.setErrorEnabled(false);
         }
 
-
         String repeatPassword = edtRepeatPassword.getText().toString().trim();
         if (TextUtils.isEmpty(repeatPassword)) {
             ilRepeatPassword.setError("Enter Password Again");
@@ -155,7 +160,6 @@ public class SignUpActivity extends HelperActivity {
         } else {
             ilRepeatPassword.setErrorEnabled(false);
         }
-
 
         if (!repeatPassword.equals(password)) {
             ilRepeatPassword.setError("Passwords do not match");
@@ -208,7 +212,9 @@ public class SignUpActivity extends HelperActivity {
                 .addOnCompleteListener(dataUpdateTask -> {
                     dismissProgressDialog();
                     if (dataUpdateTask.isSuccessful()) {
-                        GEDialogUtility.getSuccessDialog(this, "Done").show();
+                        GEUtility.saveUid(SignUpActivity.this, uid);
+                        launch(EmployeeDashboardActivity.class);
+                        finish();
                     } else {
                         String errorMsg = dataUpdateTask.getException().getMessage();
                         GEDialogUtility.getErrorDialog(this, errorMsg).show();

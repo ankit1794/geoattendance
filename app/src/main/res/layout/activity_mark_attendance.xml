@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/layout_default_toolbar" />
+
+
+    <LinearLayout
+        android:id="@+id/employee_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/abl_toolbar"
+        android:layout_marginTop="@dimen/m_16"
+        android:weightSum="2"
+        tools:ignore="UnknownId">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_employee_profile_image_attendance"
+            android:layout_width="0dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="140dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_signup_profile"
+
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_time_lable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/employee_image"
+        android:layout_marginTop="10dp"
+        android:padding="16dp"
+        android:text="Time:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp" />
+
+
+    <TextView
+        android:id="@+id/txt_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_time_lable"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="1dp"
+        android:hint="Time"
+        android:inputType="datetime"
+        android:padding="16dp"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/txt_location_lable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_time"
+        android:layout_marginTop="10dp"
+        android:padding="16dp"
+        android:text="Location:"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25dp" />
+
+
+    <TextView
+        android:id="@+id/txt_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_time"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="60dp"
+        android:hint="Location"
+        android:padding="16dp"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_mark_attendance"
+        style="@style/WMButton.LongButton.Login"
+        android:layout_width="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txt_location"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp"
+        android:text="Mark Attendance" />
+
+
+</RelativeLayout>

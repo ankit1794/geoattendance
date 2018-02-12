@@ -18,7 +18,7 @@ public class DatabaseReferenceManager {
     private final class ReferenceKeys{
 
         static final String USERS = "users";
-        static final String ATTENDANCE="Attendance";
+        static final String USERS_ATTENDANCE ="users_attendance";
 
 
 
@@ -45,8 +45,9 @@ public class DatabaseReferenceManager {
         return getRoot().child(ReferenceKeys.USERS);
     }
 
-    public DatabaseReference getAttendanceReference() {
-        return getRoot().child(ReferenceKeys.ATTENDANCE);
+    public DatabaseReference getAttendanceReference(String uid) {
+        //root-development, child-USER_ATTENDANCE, uid-users id
+        return getRoot().child(ReferenceKeys.USERS_ATTENDANCE).child(uid);
     }
 
 }

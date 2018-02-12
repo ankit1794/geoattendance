@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_layout"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:layout_marginTop="8dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rel_1"
+        android:layout_width="80dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="6dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="4dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_employee_attendance_image"
+            android:layout_width="600dp"
+            android:layout_height="95dp"
+            android:layout_weight="2"
+            android:paddingLeft="8dp"
+
+
+            android:src="@drawable/ic_signup_profile" />
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/rel_1"
+        android:layout_toRightOf="@+id/rel_1"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="4dp">
+
+        <TextView
+            android:id="@+id/txt_checkIn"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="CheckInTime:"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/txt_check_in_time"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:layout_alignBaseline="@+id/txt_checkIn"
+            android:layout_alignBottom="@+id/txt_checkIn"
+            android:layout_toEndOf="@+id/txt_checkIn"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_checkOut_time"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/txt_check_out-Time"
+            android:background="@android:color/transparent"
+            android:onClick="CheckOut"
+            android:text="CheckOut"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/txt_check_out-Time"
+            android:layout_width="200dp"
+            android:layout_height="20dp"
+            android:layout_alignBaseline="@+id/btn_checkOut_time"
+            android:layout_alignBottom="@+id/btn_checkOut_time"
+            android:layout_alignParentEnd="true"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/rel_1"
+        android:paddingBottom="4dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="4dp">
+
+        <TextView
+            android:id="@+id/txt_lbl_attendance1"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="14dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+
+            android:text="Location:"
+            android:textColor="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/dashboard_txt_location"
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/txt_lbl_attendance1"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentBottom="true"
+
+        android:background="@color/colorDivider" />
+
+
+</RelativeLayout>

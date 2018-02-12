@@ -17,6 +17,7 @@ public class StorageReferenceManager {
 
     private final class ReferenceKeys {
         static final String USER_IMAGE_REFERENCE = "user_profile_images";
+        static final String USER_IMAGE_ATTENDANCE="user_attendance_images";
 
     }
 
@@ -39,5 +40,8 @@ public class StorageReferenceManager {
         return getRoot().child(ReferenceKeys.USER_IMAGE_REFERENCE);
     }
 
+    public StorageReference getUserAttendanceImageReference(){
+        return getRoot().child(ReferenceKeys.USER_IMAGE_ATTENDANCE);
+    }
 
 }

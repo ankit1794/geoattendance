@@ -1,6 +1,9 @@
 package com.tadnyasoftech.geoattendance.models;
 
-import java.io.Serializable;
+import android.location.Location;
+import android.net.Uri;
+
+import java.util.ArrayList;
 
 /**
  * Created by dell on 19/12/17.
@@ -14,9 +17,17 @@ public class Attendance {
 
     private long checkOutTime;
 
+    private String address;
+
     private String imageUrl;
 
-    public String getId() { return id; }
+    private double latitude;
+
+    private double longitude;
+
+    public String getId() {
+        return id;
+    }
 
     public void setId(String id) {
         this.id = id;
@@ -34,8 +45,16 @@ public class Attendance {
         return checkOutTime;
     }
 
-    public void setCheckOutTime(long checkOutTime) {
+    public void setCheckOutTime() {
         this.checkOutTime = checkOutTime;
+    }
+
+    public  String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getImageUrl() {
@@ -44,5 +63,21 @@ public class Attendance {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
     }
 }

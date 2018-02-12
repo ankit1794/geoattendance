@@ -1,5 +1,6 @@
 package com.tadnyasoftech.geoattendance.utils;
 
+import android.app.Activity;
 import android.content.Context;
 import android.text.InputType;
 
@@ -38,6 +39,29 @@ public class GEDialogUtility {
                 .inputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS)
                 .positiveText(R.string.dialog_action_send)
                 .input(R.string.dialog_hint_forgot, 0, inputCallback).build();
+
+    }
+
+    public static MaterialDialog getExitDialog(Context context) {
+        return new MaterialDialog.Builder(context)
+                .title(context.getString(R.string.dialog_title_confirmation))
+                .titleColorRes(R.color.colorAccent)
+                .content(context.getString(R.string.dialog_msg_exit))
+                .positiveText(context.getString(R.string.dialog_action_yes))
+                .negativeText(context.getString(R.string.dialog_action_no))
+                .onNegative((dialog, which) -> dialog.dismiss())
+                .onPositive((dialog, which) -> ((Activity) context).finishAffinity()).build();
+    }
+
+
+    public static MaterialDialog getLogoutDialog(Context context) {
+        return new MaterialDialog.Builder(context)
+                .title(context.getString(R.string.dialog_title_information))
+                .content(context.getString(R.string.dialog_message_logout))
+                .positiveText(context.getString(R.string.dialog_action_yes))
+                .negativeText(context.getString(R.string.dialog_action_no))
+                .onPositive((dialog, which) -> GEUtility.logout(context))
+                .onNegative((dialog, which) -> dialog.dismiss()).build();
 
     }
 }
